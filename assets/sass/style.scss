@@ -1,0 +1,225 @@
+@import "_variables";
+
+html,
+body {
+    width: 100%;
+    height: auto;
+    background-color: $color-p-lite;
+}
+
+img {
+    max-width: 90%;
+}
+
+.my-5e {
+    margin: 5em 0;
+}
+
+.content-wrapper {
+    width: calc(100% - 50px);
+    margin-left: 50px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input.form-control,
+.input-group-text,
+select.form-control,
+textarea.form-control {
+    border: 1px solid $color-grey;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 45px;
+    font-size: 16px;
+    color: #000;
+    box-sizing: border-box;
+    padding: 0 15px;
+}
+
+textarea.form-control {
+    height: auto;
+    padding-top: 15px;
+}
+
+select {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../images/ddarrow.png);
+    background-repeat: no-repeat;
+    background-position-x: 95%;
+    background-position-y: 50%;
+}
+
+.input-group-text {
+    background-color: transparent;
+    border-right: 1px solid rgba(112, 112, 112, 0.3);
+}
+
+.input-group-prepend {
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+}
+.input-group-prepend + input {
+    border-left: none;
+}
+
+.input-group > input.form-control {
+    border-right: 0;
+}
+
+.section-heading h2 {
+    margin-bottom: 45px;
+}
+
+#wrapper {
+    width: 100%;
+    max-width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+    margin-top: 100px;
+}
+
+.navbar-brand {
+    display: inline-block;
+    max-width: 135px;
+}
+
+.card {
+    border-radius: 10px;
+    border: none;
+    overflow: hidden;
+    .card-header:not(.bg-p) {
+        background-color: $color-light;
+        @extend .h-l;
+        @extend .pop-heavy;
+    }
+}
+
+.input-group-text {
+    min-width: 55px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    font-size: 18px;
+    color: $color-dark;
+}
+
+span.circle {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 50px;
+    font-size: 18px;
+    background: #f5f5f5;
+}
+
+nav {
+    margin-bottom: 2em;
+    height: 80px;
+    background-color: $color-light;
+    box-shadow: 1px 8px 8px rgba(0, 0, 0, 0.05);
+    a {
+        display: inline-block;
+        margin: 0 10px;
+        color: $color-dark !important;
+        &:hover {
+            color: $color-p !important;
+        }
+    }
+    .btn-nav {
+        height: 45px;
+        line-height: 20px;
+        padding: 15px 35px;
+    }
+}
+
+#sidemenu {
+    width: 250px;
+    height: calc(100% - 80px);
+    background-color: $color-sidebar-p;
+    position: fixed;
+    left: 0rem;
+    bottom: 0;
+    z-index: 100;
+    transition: all 0.3s ease;
+    a {
+        color: $color-grey;
+        text-decoration: none;
+        display: block;
+        padding: 12px 15px;
+
+        &:hover {
+            background-color: $color-p;
+            color: $color-light;
+        }
+        i {
+            margin-right: 10px;
+        }
+    }
+}
+
+#sidemenu.collapsed {
+    width: 60px;
+    transition: all 0.3s ease;
+    display: block;
+    ul {
+        text-align: center;
+        a {
+            span {
+                display: none;
+            }
+        }
+    }
+}
+
+ul.order-brief li {
+    border-bottom: 1px solid #dfe5e8;
+    padding: 10px 0;
+}
+
+.table-input {
+    position: relative;
+    span{
+        position: absolute;
+        display: block;
+        height: 28px;
+        padding: 0 5px;
+        top: 1px;
+        left: 1px;
+        font-size: 14px;
+        line-height: 28px;
+    }
+    input {
+        height: 30px !important;
+        padding: 0 10px 0 30px;
+        margin: 0px 0px 0 0;
+        width: 90px;
+        border-radius: 0;
+        border: 1px solid $color-grey;
+        font-size: 16px;
+        text-align: right;
+        border-radius: 3px;
+    }
+}
+
+// .table-input .input-group-text {
+//     height: 31px;
+//     margin: 0;
+//     padding: 0px 16px;
+//     max-width: 10px;
+//     display: inline-block;
+//     min-width: unset;
+//     text-align: center;
+//     background: #fff;
+//     border: 0;
+//     color: grey;
+//     font-size: 16px;
+//     line-height: 30px;
+// }
+
+.input-group-text.disabled {
+    background: $color-grey;
+}

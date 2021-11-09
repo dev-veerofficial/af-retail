@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Fuel Orders | Aquafuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="assets/lib/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container-fluid p-0">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="assets/images/applegreen.png" alt=""> </a>
+
+                    <a href="javascript:void(0);" id="asidetogglr"><i class="fa fa-bars"></i></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="btn btn-p" aria-current="page" href="#">
+                                    + Add Fuel Order
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><i
+                                        class="icon-download-dark"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="icon-bell"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>Mike Parker</strong>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                        class="icon-power-off"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Aside menubar -->
+            <aside id="sidemenu" class="collapsed">
+                <ul class="p-0">
+                    <li>
+                        <a href=""><i class="icon icon-dashboard"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-check-square-fill"></i> <span>Master Plan</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-eye"></i> <span>Monitor Delivery Plan</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-calendar-filled"></i> <span>Scheduled Deliveries</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-list"></i> <span>Fuel Orders</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-edit"></i> <span>Edit History </span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-calendar-remove"></i> <span>Cancelled Orders</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-cloud-download"></i> <span>Export Deliveries</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-bell"></i> <span>Track Notifications</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-checklist"></i> <span>Checklist Logs</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-patch-exclamation"></i> <span>Defect Logs</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-mask"></i> <span>Driver Infringements</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-settings-sharp"></i> <span>Settings</span> </a>
+                    </li>
+                </ul>
+                <div class="powered">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">powered by <br><a href="">Aquafuel Ltd</a></div>
+                    </div>
+                </div>
+            </aside>
+            <!--  -->
+            <div class="container-fluid bg-transparent content-wrapper px-4 mt-3">
+                <div class="card">
+                    <div class="card-header pt-4">
+                        <h4>Track Notification</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row mb-5">
+                            <div class="col-2">
+                                <div class="form-group">
+                                    <label for="">Search</label>
+                                    <input type="text" class="form-control" placeholder="Search...">
+                                </div>
+                            </div>
+                            <!-- <div class="col-2">
+                                <div class="form-group">
+                                    <label for="">Order Range</label>
+                                    <input type="text" name="daterange" class="form-control" placeholder="Select Date">
+                                </div>
+                            </div>
+                            <div class="col-2">
+                                <div class="form-group">
+                                    <label for="">Order Status</label>
+                                    <select name="" id="" class="form-control">
+                                        <option value="" selected>All Orders</option>
+                                        <option value="">Completed</option>
+                                        <option value="">Pending</option>
+                                        <option value="">Cancelled</option>
+                                    </select>
+                                </div>
+                            </div> -->
+                        </div>
+                        <div class="table-responsive">
+                            <table class="table table-striped-inactive table-hover">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Date</th>
+                                        <th>Receiver Detail</th>
+                                        <th>Sent to</th>
+                                        <th>Type</th>
+                                        <th>Details</th>
+                                    </tr>
+                                </thead>
+                                <tbody>                                    
+                                    <!--  -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>13 Sep 2021, <br> <small class="txt-grey">10:37:15AM</small> </td>
+                                        <td>Lifford (24) (PS(GAS)), <br> <small class="txt-grey">Destination</small></td>
+                                        <td>00353861571221 <br> <small class="txt-grey">13 Sep 21, 10:37:15AM</small> </td>
+                                        <td>Text</td>
+                                        <td>
+                                            Your planned delivery to 9176 Birdhill (24) is on its way and will be with you in approx 1 hour
+                                        </td>                                        
+                                    </tr>
+                                    <!--  -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>13 Sep 2021, <br> <small class="txt-grey">10:37:15AM</small> </td>
+                                        <td>Lifford (24) (PS(GAS)), <br> <small class="txt-grey">Destination</small></td>
+                                        <td>00353861571221 <br> <small class="txt-grey">13 Sep 21, 10:37:15AM</small> </td>
+                                        <td>Text</td>
+                                        <td>
+                                            Your planned delivery to 9176 Birdhill (24) is on its way and will be with you in approx 1 hour
+                                        </td>                                        
+                                    </tr>
+                                    <!--  -->
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--  -->
+
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+        integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <script src="assets/js/script.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,210 @@
+// colors
+$color-p: #ff6934;
+$color-p-lite: #fcf0eb;
+$color-grey: #a8b0c9;
+$color-litegrey: #f8f8f8;
+$color-light: #fff;
+$color-dark: #000;
+$color-err: #f64e4e;
+$color-sidebar-p: #17203f;
+$color-sidebar-s: #273050;
+
+//Effects
+
+.shadow-btn-s {
+    box-shadow: 0 13px 9px rgb(187, 182, 177);
+}
+.shadow-card {
+    box-shadow: 0 30px 20px rgba(246, 245, 254, 0.2);
+}
+.bg-gradient {
+    background: linear-gradient(to right, #1c105e, #2d063c);
+}
+
+.bg-light {
+    background-color: $color-light;
+}
+
+.bg-grey {
+    background-color: $color-grey;
+}
+.bg-p {
+    background-color: $color-p;
+}
+.txt-p {
+    color: $color-p;
+}
+.txt-lite {
+    color: $color-light;
+}
+.txt-grey {
+    color: $color-grey;
+}
+
+// Fonts:
+.font-pop {
+    font-family: "Poppins", sans-serif;
+}
+.font-opens {
+    font-family: "Open Sans", sans-serif;
+}
+
+.pop-heavy {
+    @extend .font-pop;
+    font-weight: bold;
+}
+
+.pop-reg {
+    @extend .font-pop;
+    font-weight: normal;
+}
+
+.pop-lite {
+    @extend .font-pop;
+    font-weight: normal !important;
+}
+
+.para-xs {
+    font-size: 12px !important;
+}
+.para-sm {
+    font-size: 14px !important;
+}
+.para-reg {
+    font-size: 16px !important;
+}
+.para-lg {
+    font-size: 18px !important;
+}
+.para-xl {
+    font-size: 20px !important;
+}
+.h-s {
+    font-size: 22px !important;
+}
+.h-m {
+    font-size: 24px !important;
+}
+.h-l {
+    font-size: 28px !important;
+}
+.h-xl {
+    font-size: 32px !important;
+}
+.h-xxl {
+    font-size: 34px !important;
+}
+.h-xxxl {
+    font-size: 42px !important;
+    line-height: 80px;
+}
+
+// Buttons
+
+.btn {
+    @extend .pop-lite;
+    width: auto;
+    height: 50px;
+    line-height: 20px;
+    border-radius: 5px !important;
+    border: none;
+    padding: 15px 30px !important;
+}
+
+.btn-p {
+    background-color: $color-p;
+    color: $color-light !important;
+}
+
+.btn-light-p {
+    background-color: $color-light;
+    color: $color-p;
+}
+
+// .btn-light-s {
+//     background-color: $color-light;
+//     color: $color-s;
+// }
+
+.btn-outline-s {
+    background: transparent;
+    color: $color-dark;
+    border: 1px solid $color-grey;
+}
+.btn-outline-p {
+    background: transparent;
+    color: $color-dark !important;
+    border: 1px solid $color-p;
+    &:hover{
+        background: $color-p;
+        border-color: $color-p;
+        color: $color-light !important;
+    }
+}
+
+.btn-capsule {
+    border-radius: 35px !important;
+}
+
+.btn-auto {
+    width: auto !important;
+    min-width: none !important;
+    height: auto;
+    min-height: auto;
+}
+
+.btn-mini {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.btn-sm {
+    height: 40px !important;
+    line-height: 10px !important;
+    min-width: 0 !important;
+    padding: 15px 25px !important;
+}
+a:not(footer a) {
+    color: $color-p;
+}
+
+.link-light a,
+a .link-light {
+    color: $color-light;
+    &:hover {
+        color: $color-p;
+        text-decoration: none;
+    }
+}
+
+a{
+    text-decoration: none;
+}
+
+.btn-strong {
+    @extend .pop-heavy;
+}
+
+//width and height
+.w100,
+.w100 * {
+    width: 100%;
+}
+
+.form-group {
+    position: relative;
+    margin-top: 20px;
+
+    label {
+        @extend .para-sm;
+        color: $color-grey;
+        position: absolute;
+        top: -14px;
+        left: 10px;
+        display: inline-block;
+        padding: 3px 10px;
+        background: $color-light;
+        z-index: 4;
+    }
+}
