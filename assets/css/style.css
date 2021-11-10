@@ -341,6 +341,7 @@ nav .btn-nav {
   bottom: 0;
   z-index: 100;
   transition: all 0.3s ease;
+  overflow-y: auto;
 }
 #sidemenu a {
   color: #a8b0c9;
@@ -354,6 +355,10 @@ nav .btn-nav {
 }
 #sidemenu a i {
   margin-right: 10px;
+}
+#sidemenu ul ul {
+  background-color: #273050;
+  padding: 0;
 }
 
 #sidemenu.collapsed {
@@ -400,6 +405,40 @@ ul.order-brief li {
 
 .input-group-text.disabled {
   background: #a8b0c9;
+}
+
+#formaside {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 600px;
+  height: 100vh;
+  z-index: 9999;
+  background-color: #fff;
+  box-shadow: 1px 40px 10px rgba(0, 0, 0, 0.2);
+}
+
+.panel-header {
+  border-bottom: 1px solid #dfe5e8;
+}
+
+.form-group.in-table {
+  margin: 0 !important;
+}
+.form-group.in-table input,
+.form-group.in-table select {
+  width: 150px;
+  height: 30px;
+  margin: 5px 0;
+  border: 1px solid #b9d2dc;
+}
+
+table tbody tr:nth-child(odd) {
+  background: #f8fafa;
+}
+
+thead th {
+  padding: 10px !important;
 }
 
 /*# sourceMappingURL=style.css.map */

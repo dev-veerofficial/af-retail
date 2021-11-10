@@ -9,14 +9,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
         integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <link rel="stylesheet" href="assets/lib/icomoon/style.css">
+    <link rel="stylesheet" href="../assets/lib/icomoon/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/base/jquery-ui.css" rel="stylesheet"
         type="text/css" />
 
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
-    <link rel="stylesheet" href="assets/css/style.css">
-    <link rel="stylesheet" href="assets/css/media.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
 </head>
 
 <body>
@@ -25,7 +25,7 @@
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#"><img src="assets/images/applegreen.png" alt=""> </a>
+                    <a class="navbar-brand" href="#"><img src="../assets/images/applegreen.png" alt=""> </a>
 
                     <a href="javascript:void(0);" id="asidetogglr"><i class="fa fa-bars"></i></a>
 
@@ -124,98 +124,60 @@
             <div class="container-fluid bg-transparent content-wrapper px-4 mt-3">
                 <div class="card">
                     <div class="card-header pt-4">
-                        <h4>Defect Logs</h4>
+                        <h4>Customers</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-5">
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Search</label>
-                                    <input type="text" class="form-control" placeholder="Search...">
+                        <div class="row mb-5 justify-content-between">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="form-group">
+                                            <label for="">Search</label>
+                                            <input type="text" class="form-control" placeholder="Search...">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Range</label>
-                                    <input type="text" name="daterange" class="form-control" placeholder="Select Date">
-                                </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="" selected>All Orders</option>
-                                        <option value="">Completed</option>
-                                        <option value="">Pending</option>
-                                        <option value="">Cancelled</option>
-                                    </select>
-                                </div>
-                            </div> -->
+                            <div class="col-3 d-flex align-items-end justify-content-end align-self-end">
+                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()" class="btn btn-p btn-capsule">+ Add Customer</a>
+                            </div>                           
                         </div>
                         <div class="table-responsive">
                             <table class="table table-striped-inactive table-hover">
                                 <thead>
                                     <tr>
                                         <th>#</th>
-                                        <th>Date</th>
-                                        <th>Driver</th>
-                                        <th>Fleet</th>
-                                        <th>Defects</th>
-                                        <th>Notes</th>
-                                        <th>Documents</th>
-                                        <th>Status</th>
-                                        <th>Action</th>
+                                        <th>Name</th>
+                                        <th>Type</th>
+                                        <th>Email</th>
+                                        <th>ID</th>
+                                        <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <!--  -->
                                     <tr>
                                         <td>1</td>
-                                        <td>13 Sep 2021, <small class="txt-grey">10:37AM</small> </td>
-                                        <td>James Sheehy (G4S)</td>
-                                        <td>192 D 21864 - PWT 724</td>
-                                        <td style="max-width: 250px;">Insurance and transport discs (if applicable) present and valid. Number plates clearly visible. <br> <strong> Defect Details: </strong> Drive tyres needs to be replaced</td>
-                                        <td style="max-width: 200px;">
-                                            <div class="form-group">
-                                                <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
-                                            </div>
-                                        </td>
+                                        <td>Applegreen</td>
+                                        <td>Admin</td>
+                                        <td>b.ring@example.com</td>
+                                        <td>101</td>
                                         <td>
-                                            <ul class="list-unstyled">
-                                                <li><i class="fa fa-paperclip"></i> Doc110220...</li>
-                                                <li><i class="fa fa-paperclip"></i> Doc110220...</li>
-                                                <li> <a href="#">+ Add Document</a> </li>
-                                            </ul>                                            
+                                            <a href="#" class="me-3 text-warning"><i class="fa fa-pen"></i></a>
+                                            <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
-                                        <td>
-                                            <span class="text-warning">Pending</span>
-                                        </td>
-                                        <td> <a href="javascript:void(0);" class="btn btn-sm btn-outline-p btn-capsule"> <i class="fa fa-check"></i> Done </td>                                    
                                     </tr>
                                     <!--  -->
                                     <tr>
                                         <td>1</td>
-                                        <td>13 Sep 2021, <small class="txt-grey">10:37AM</small> </td>
-                                        <td>James Sheehy (G4S)</td>
-                                        <td>192 D 21864 - PWT 724</td>
-                                        <td style="max-width: 250px;">Insurance and transport discs (if applicable) present and valid. Number plates clearly visible. <br> <strong> Defect Details: </strong> Drive tyres needs to be replaced</td>
-                                        <td style="max-width: 200px;">
-                                            <div class="form-group">
-                                                <textarea name="" id="" cols="30" rows="3" class="form-control"></textarea>
-                                            </div>
-                                        </td>
+                                        <td>Applegreen</td>
+                                        <td>Admin</td>
+                                        <td>b.ring@example.com</td>
+                                        <td>101</td>
                                         <td>
-                                            <ul class="list-unstyled">
-                                                <li><i class="fa fa-paperclip"></i> Doc110220...</li>
-                                                <li><i class="fa fa-paperclip"></i> Doc110220...</li>
-                                                <li> <a href="#">+ Add Document</a> </li>
-                                            </ul>                                            
+                                            <a href="#" class="me-3 text-warning"><i class="fa fa-pen"></i></a>
+                                            <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
-                                        <td>
-                                            <span class="text-success">Done</span> <br>
-                                            <small class="txt-grey">15 Jul 21, 17:35</small>
-                                        </td>
-                                        <td> <a href="javascript:void(0);" class="btn btn-sm btn-outline-p btn-capsule"> <i class="fa fa-check"></i> Done </td>                                    
                                     </tr>
                                     <!--  -->
                                 </tbody>
@@ -226,6 +188,84 @@
             </div>
             <!--  -->
         </div>
+        <!-- Form Sidebar -->
+        <aside id="formaside" class="userformpanel">
+            <div class="panel">
+                <div class="panel-header">
+                    <div class="row p-4">
+                        <div class="col-6">
+                            <h5>Add Customer</h5>
+                        </div>
+                        <div class="col-6 d-flex justify-content-end">
+                           <a href="javascript:void(0);" id="panelclosr" onclick="closeFormPanel()"><i class="icon icon-close"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="panel-body px-4 pt-4">
+                    <div class="row"><strong>Basic Details</strong></div>
+                    <div class="row ">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Customer Name</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6"></div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Phone</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="">Working Days in Month</label>
+                                <input type="text" class="form-control">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4"><strong>Select Fuel Type</strong></div>
+                    <div class="row">
+                        <div class="col-12 mt-2">
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">Diesel</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Prem Diesel</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">E5</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Prem E5</label>
+                            </div>
+                            <br> <span class="d-flex my-1"></span>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                                <label class="form-check-label" for="inlineCheckbox1">D2</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">SFGO</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
+                                <label class="form-check-label" for="inlineCheckbox2">Kerosene</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row mt-4">
+                        <a href="#" class="btn btn-p btn-outline-p btn-capsule mx-2" onclick="closeFormPanel()">Cancel</a>
+                        <a href="#" class="btn btn-p btn-capsule mx-2">Add Customer</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+        <!--  -->
     </div>
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -237,7 +277,7 @@
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
-    <script src="assets/js/script.js"></script>
+    <script src="../assets/js/script.js"></script>
     <script>
         $(function () {
             $("#datepicker").datepicker();

@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Fuel Orders | Aquafuel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="../assets/lib/icomoon/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.5/themes/base/jquery-ui.css" rel="stylesheet"
+        type="text/css" />
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/media.css">
+</head>
+
+<body>
+    <div id="wrapper">
+        <div class="container-fluid p-0">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg fixed-top">
+                <div class="container-fluid">
+                    <a class="navbar-brand" href="#"><img src="../assets/images/applegreen.png" alt=""> </a>
+
+                    <a href="javascript:void(0);" id="asidetogglr"><i class="fa fa-bars"></i></a>
+
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="nav-item">
+                                <a class="btn btn-p" aria-current="page" href="#">
+                                    + Add Fuel Order
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="#"><i
+                                        class="icon-download-dark"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#"><i class="icon-bell"></i></a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    <strong>Mike Parker</strong>
+                                </a>
+                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <li><a class="dropdown-item" href="#">Action</a></li>
+                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#" tabindex="-1" aria-disabled="true"><i
+                                        class="icon-power-off"></i></a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Aside menubar -->
+            <aside id="sidemenu" class="collapsed">
+                <ul class="p-0">
+                    <li>
+                        <a href=""><i class="icon icon-dashboard"></i> <span>Dashboard</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-check-square-fill"></i> <span>Master Plan</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-eye"></i> <span>Monitor Delivery Plan</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-calendar-filled"></i> <span>Scheduled Deliveries</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-list"></i> <span>Fuel Orders</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-edit"></i> <span>Edit History </span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-calendar-remove"></i> <span>Cancelled Orders</span></a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-cloud-download"></i> <span>Export Deliveries</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-bell"></i> <span>Track Notifications</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-checklist"></i> <span>Checklist Logs</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-patch-exclamation"></i> <span>Defect Logs</span> </a>
+                    </li>
+                    <li>
+                        <a href=""><i class="icon icon-mask"></i> <span>Driver Infringements</span> </a>
+                    </li>
+                    <li class="dd">
+                        <a href=""><i class="icon icon-settings-sharp"></i> <span>Settings</span> </a>
+                        <ul class="submenu">
+                            <li><a href="">Trailers</a></li>
+                            <li><a href="">Tolls</a></li>
+                            <li><a href="">Trucks</a></li>
+                            <li><a href="">Drivers</a></li>
+                            <li><a href="">Fuel Types</a></li>
+                            <li><a href="">Destinations</a></li>
+                            <li><a href="">Terminals</a></li>
+                            <li><a href="">Customers</a></li>
+                            <li><a href="">Users</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="powered">
+                    <div class="row">
+                        <div class="col"></div>
+                        <div class="col">powered by <br><a href="">Aquafuel Ltd</a></div>
+                    </div>
+                </div>
+            </aside>
+            <!--  -->
+            <div class="container-fluid bg-transparent content-wrapper">
+                <div class="row px-5 ">
+                    <div class="card px-0">
+                        <div class="card-header pt-3">
+                            <h5>Add Destination</h5>
+                        </div>
+                        <div class="card-body">
+                            <form action="">
+                                <div class="row mt-1">
+                                    <strong>Basic Details</strong>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Type</label>
+                                            <select name="" id="" class="form-control">
+                                                <option selected disabled>Select Type</option>
+                                                <option>Type 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Serial Number</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Code</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Type</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Type</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="" selected disabled>Select Type</option>
+                                                <option value="">Type 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Region</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="" selected disabled>Select Region</option>
+                                                <option value="">Region 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+
+                                </div>
+                                <div class="row mt-4">
+                                    <strong>Site Address</strong>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-6 col-lg-4">
+                                        <div class="form-group">
+                                            <label for="">Address</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">City</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">County</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="row mt-4">
+                                    <strong>Manager Details</strong>
+                                </div>
+                                <div class="row">
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Site Manager Name</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">Email</label>
+                                            <input type="text" class="form-control">
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                    <div class="col-12 col-md-3 col-lg-2">
+                                        <div class="form-group">
+                                            <label for="">County</label>
+                                            <select name="" id="" class="form-control">
+                                                <option value="" selected disabled>Select County</option>
+                                                <option value="">County 1</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="row mt-4">
+                                    <strong>Fuel Details</strong>
+                                    <small class="txt-grey">Select Fuel types and add details applicable to new
+                                        destination.</small>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 col-md-3 col-lg-4">
+                                        <div class="table-responsive">
+                                            <table class="table table-hover table-bordered table-sm align-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Fuel Type</th>
+                                                        <th>Capacity</th>
+                                                        <th>Stock Reading</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <input name="diesel" id="diesel" type="checkbox">
+                                                            <label for="diesel">Diesel</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="premderv" id="premderv" type="checkbox">
+                                                            <label for="premderv">Prem Derv</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="e5" id="e5" type="checkbox">
+                                                            <label for="e5">E5</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="preme5" id="preme5" type="checkbox">
+                                                            <label for="preme5">Prem E5</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="kerosene" id="kerosene" type="checkbox">
+                                                            <label for="kerosene">Kerosene</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="sfgo" id="sfgo" type="checkbox">
+                                                            <label for="sfgo">SFGO</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>
+                                                            <input name="d2" id="d2" type="checkbox">
+                                                            <label for="d2">D2</label>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="number"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <!--  -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <!--  -->
+                                <div class="row mt-4">
+                                    <strong>Terminal Distance & Time </strong>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-12 col-md-3 col-lg-8">
+                                        <div class="table-responsive">
+                                            <table
+                                                class="table table-hover table-bordered table-sm table-compressed align-middle">
+                                                <thead>
+                                                    <tr>
+                                                        <th>Terminal</th>
+                                                        <th>Distance (in Miles)</th>
+                                                        <th>Time (hh:mm)</th>
+                                                        <th>Tolls</th>
+                                                        <th>Action</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>
+                                                            <div class="form-group in-table">
+                                                                <select name="" id="" class="form-control input-sm">
+                                                                    <option value="" selected disabled>Select Terminal
+                                                                    </option>
+                                                                    <option value="">Terminal 1</option>
+                                                                </select>
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="text"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="0"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-group in-table"><input type="text"
+                                                                    class="form-control text-right input-sm"
+                                                                    placeholder="00:00"></div>
+                                                        </td>
+                                                        <td>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="inlineCheckbox1" value="option1">
+                                                                <label class="form-check-label"
+                                                                    for="inlineCheckbox1">M1</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline">
+                                                                <input class="form-check-input" type="checkbox"
+                                                                    id="inlineCheckbox2" value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineCheckbox2">M50</label>
+                                                            </div>
+                                                        </td>
+                                                        <td class="align-middle text-center">
+                                                            <a href="javascript:void(0);"
+                                                                class="btn btn-outline-p btn-sm btn-capsule">+ Add</a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>Foynes</td>
+                                                        <td>150 Miles</td>
+                                                        <td>3h 30m</td>
+                                                        <td>
+                                                            <span class="badge bg-p">M1</span>
+                                                            <span class="badge bg-p">M50</span>
+                                                            <span class="badge bg-p">M4</span>
+                                                            <span class="badge bg-p">M7</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a href="javascript:void(0);" class="text-danger"><i
+                                                                    class="fa fa-trash"></i> Delete </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--  -->
+                                                    <tr>
+                                                        <td>Arklow</td>
+                                                        <td>100 Miles</td>
+                                                        <td>2h 30m</td>
+                                                        <td>
+                                                            <span class="badge bg-p">M1</span>
+                                                            <span class="badge bg-p">M50</span>
+                                                            <span class="badge bg-p">M4</span>
+                                                        </td>
+                                                        <td class="text-center">
+                                                            <a href="javascript:void(0);" class="text-danger"><i
+                                                                    class="fa fa-trash"></i> Delete </a>
+                                                        </td>
+                                                    </tr>
+                                                    <!--  -->
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                    <!--  -->
+                                </div>
+                                <div class="row my-5">
+                                    <div class="col-12">
+                                        <a href="" class="btn btn-p btn-capsule btn-outline-p">Cancel</a>
+                                        <a href="" class="btn btn-p btn-capsule ms-3">Add New Destination</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- JavaScript -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
+        integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <script src="../assets/js/script.js"></script>
+    <script>
+        $(function () {
+            $("#datepicker").datepicker();
+        });
+    </script>
+</body>
+
+</html>
