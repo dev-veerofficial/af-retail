@@ -217,6 +217,28 @@ img {
   margin-left: 50px;
 }
 
+/* ===== Scrollbar CSS ===== */
+/* Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #273050 #17203f;
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 6px;
+}
+
+*::-webkit-scrollbar-track {
+  background: #17203f;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #273050;
+  border-radius: 10px;
+  border: 3px none #273050;
+}
+
 input[type=text],
 input[type=password],
 input[type=email],
@@ -359,12 +381,24 @@ nav .btn-nav {
 #sidemenu ul ul {
   background-color: #273050;
   padding: 0;
+  display: none;
+}
+#sidemenu ul ul li a {
+  padding: 8px 15px;
+}
+
+li.dd > a:after {
+  content: "\f0da";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 0;
 }
 
 #sidemenu.collapsed {
   width: 60px;
   transition: all 0.3s ease;
   display: block;
+  overflow-y: hidden;
 }
 #sidemenu.collapsed ul {
   text-align: center;
