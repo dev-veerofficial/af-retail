@@ -135,6 +135,20 @@
   color: #fff !important;
 }
 
+.btn-outline-success {
+  border: 1px solid #1AB156 !important;
+  color: #1AB156;
+}
+.btn-outline-success:hover {
+  background: #1AB156;
+  border-color: #ff6934;
+  color: #fff !important;
+}
+.btn-outline-success[disabled] {
+  color: #a8b0c9 !important;
+  border-color: #a8b0c9 !important;
+}
+
 .btn-capsule {
   border-radius: 35px !important;
 }

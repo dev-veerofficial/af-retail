@@ -5,6 +5,7 @@ $color-grey: #a8b0c9;
 $color-litegrey: #f8f8f8;
 $color-light: #fff;
 $color-dark: #000;
+$color-success: #1AB156;
 $color-err: #f64e4e;
 $color-sidebar-p: #17203f;
 $color-sidebar-s: #273050;
@@ -139,6 +140,20 @@ $color-sidebar-s: #273050;
         background: $color-p;
         border-color: $color-p;
         color: $color-light !important;
+    }
+}
+
+.btn-outline-success {
+    border: 1px solid $color-success !important;
+    color: $color-success;
+    &:hover{
+        background: $color-success;
+        border-color: $color-p;
+        color: $color-light !important;
+    }
+    &[disabled]{
+        color: $color-grey !important;
+        border-color: $color-grey !important;
     }
 }
 
