@@ -127,30 +127,22 @@
                         <h4>Drivers</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-5">
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Search</label>
-                                    <input type="text" class="form-control" placeholder="Search...">
+                        <div class="row mb-5 justify-content-between">
+                            <div class="col-9">
+                                <div class="row">
+                                    <div class="col-2">
+                                        <div class="form-group">
+                                            <label for="">Search</label>
+                                            <input type="text" class="form-control" placeholder="Search...">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <!-- <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Range</label>
-                                    <input type="text" name="daterange" class="form-control" placeholder="Select Date">
-                                </div>
+                            <div class="col-3 d-flex align-items-end justify-content-end align-self-end">
+                                <a href="javascript:void(0);" id="panelCaller"
+                                    class="btn btn-p btn-capsule" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight">+ Add Driver</a>
                             </div>
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="" selected>All Orders</option>
-                                        <option value="">Completed</option>
-                                        <option value="">Pending</option>
-                                        <option value="">Cancelled</option>
-                                    </select>
-                                </div>
-                            </div> -->
                         </div>
                         <div class="table-responsive">
                             <table class="table table-striped-inactive table-hover">
@@ -173,7 +165,7 @@
                                             <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
                                     </tr>
-                                    <!--  -->                                    
+                                    <!--  -->
                                     <tr>
                                         <td>1</td>
                                         <td>Gary McWalters</td>
@@ -183,8 +175,8 @@
                                             <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
                                     </tr>
-                                    <!--  -->                                    
-                                                      
+                                    <!--  -->
+
                                 </tbody>
                             </table>
                         </div>
@@ -193,92 +185,112 @@
             </div>
             <!--  -->
         </div>
-        <!-- Form Sidebar -->
-        <aside id="formaside" class="userformpanel">
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="row p-4">
-                        <div class="col-6">
-                            <h5>Add Driver</h5>
+        <!-- OffCanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Add Drivers</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row"><strong>Basic Details</strong></div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Full Name</label>
+                            <input type="text" class="form-control err">
+                            <span class="text-danger para-xs">Required Field</span>
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
-                           <a href="javascript:void(0);" id="panelclosr" onclick="closeFormPanel()"><i class="icon icon-close"></i></a>
+                    </div>
+                    <div class="col-6"></div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Username</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Phone Number</label>
+                            <input type="text" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Email</label>
+                            <input type="email" class="form-control">
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Password</label>
+                            <input type="password" class="form-control">
                         </div>
                     </div>
                 </div>
-                <div class="panel-body px-4 pt-4">
-                    <div class="row"><strong>Basic Details</strong></div>
-                    <div class="row ">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Full Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6"></div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Username</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Phone Number</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Email</label>
-                                <input type="email" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Password</label>
-                                <input type="password" class="form-control">
-                            </div>
+                <div class="row mt-4"><strong>Preferences</strong></div>
+                <div class="row">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Preferred Truck</label>
+                            <select name="" id="" class="form-control">
+                                <option value="" selected disabled>Select Truck</option>
+                                <option value="">Truck 1</option>
+                            </select>
                         </div>
                     </div>
-                    <div class="row mt-4"><strong>Preferences</strong></div>
-                    <div class="row">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Preferred Truck</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="" selected disabled>Select Truck</option>
-                                    <option value="">Truck 1</option>
-                                </select>
-                            </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Preferred Trailer</label>
+                            <select name="" id="" class="form-control">
+                                <option value="" selected disabled>Select Trailer</option>
+                                <option value="">Trailer 1</option>
+                            </select>
                         </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Preferred Trailer</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="" selected disabled>Select Trailer</option>
-                                    <option value="">Trailer 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Preferred Shift</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="" selected disabled>Select Category</option>
-                                    <option value="">Category 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        
                     </div>
-                    <div class="row mt-5">
-                        <a href="#" class="btn btn-p btn-outline-p btn-capsule mx-2" onclick="closeFormPanel()">Cancel</a>
-                        <a href="#" class="btn btn-p btn-capsule mx-2">Add New Driver</a>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Preferred Shift</label>
+                            <select name="" id="" class="form-control">
+                                <option value="" selected disabled>Select Category</option>
+                                <option value="">Category 1</option>
+                            </select>
+                        </div>
                     </div>
+
+                </div>
+                <div class="row mt-4">
+                    <a href="#" class="btn btn-p btn-outline-p btn-capsule mx-2" class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas" aria-label="Close" onclick="showToast('formError')">Cancel</a>
+                    <a href="#" class="btn btn-p btn-capsule mx-2" onclick="showToast('formSuccess')"
+                        data-bs-dismiss="offcanvas" aria-label="Close">Add New Driver</a>
                 </div>
             </div>
-        </aside>
+        </div>
+        <!-- Success Toast Message -->
+        <div class="position-fixed end-0 m-3 toast-box" style="z-index: 1031">
+            <div id="formSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                data-bs-autohide="false">
+                <div class="toast-body text-light bg-success">
+                    <h6> <i class="fa fa-check-circle"></i> Success</h6>
+                    <p>Yayy !! Form Submitted Successfully.</p>
+                    <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Error Toast Message -->
+        <div class="position-fixed end-0 m-3 toast-box" style="z-index: 1031">
+            <div id="formError" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                data-bs-autohide="false">
+                <div class="toast-body text-light bg-danger">
+                    <h6> <i class="fa fa-exclamation-circle"></i> Error</h6>
+                    <p>Oops !! Something Went Wrong. Please Try Again.</p>
+                    <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
         <!--  -->
     </div>
     <!-- JavaScript -->

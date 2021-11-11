@@ -21,27 +21,26 @@ img {
 }
 
 /* ===== Scrollbar CSS ===== */
-  /* Firefox */
-  * {
+/* Firefox */
+* {
     scrollbar-width: thin;
     scrollbar-color: #273050 #17203f;
-  }
+}
 
-  /* Chrome, Edge, and Safari */
-  *::-webkit-scrollbar {
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
     width: 6px;
-  }
+}
 
-  *::-webkit-scrollbar-track {
+*::-webkit-scrollbar-track {
     background: #17203f;
-  }
+}
 
-  *::-webkit-scrollbar-thumb {
+*::-webkit-scrollbar-thumb {
     background-color: #273050;
     border-radius: 10px;
     border: 3px none #273050;
-  }
-  
+}
 
 input[type="text"],
 input[type="password"],
@@ -111,7 +110,7 @@ select {
 .card {
     border-radius: 10px;
     border: none;
-    overflow: hidden;
+    // overflow: hidden;
     .card-header:not(.bg-p) {
         background-color: $color-light;
         @extend .h-l;
@@ -269,6 +268,7 @@ ul.order-brief li {
 }
 
 #formaside {
+    display: none;
     position: fixed;
     top: 0;
     right: 0;
@@ -300,4 +300,154 @@ table tbody tr:nth-child(odd) {
 
 thead th {
     padding: 10px !important;
+}
+
+.mp-notebox {
+    position: absolute;
+    cursor: pointer;
+
+    &:hover .mp-note {
+        display: block;
+    }
+
+    &:hover i {
+        color: $color-p;
+    }
+}
+
+.mp-note {
+    display: none;
+    position: relative;
+    padding: 10px;
+    max-width: 350px;
+    background: $color-light;
+    border: 1px solid #b9d2dc;
+    border-radius: 0 10px 10px 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    z-index: 9998;
+}
+
+.table-mplan {
+    overflow: visible;
+}
+
+.mdmcbox {
+    position: relative;
+}
+
+.mdmc {
+    display: none;
+    position: absolute;
+    left: -80px;
+    top: 40px;
+    padding: 10px;
+    width: 220px;
+    max-width: 200px;
+    background: $color-light;
+    // border: 1px solid #b9d2dc;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+    transition: all 0.5s ease;
+    z-index: 9999;
+
+    &:after {
+        width: 0;
+        height: 0;
+        border-width: 0 15px 21px 15px;
+        border-color: transparent transparent #fff transparent;
+        border-style: solid;
+        position: absolute;
+        top: -15px;
+        left: 80px;
+        content: " ";
+    }
+
+    .input-group {
+        margin-top: 5px;
+
+        input {
+            max-width: 150px;
+            height: 30px;
+            font-size: 14px;
+        }
+        button {
+            height: 30px;
+            width: 30px;
+            line-height: 10px !important;
+            min-width: none;
+            padding: 0px !important;
+            color: $color-light;
+            border-top-left-radius: 0 !important;
+            border-bottom-left-radius: 0 !important;
+        }
+    }
+}
+
+.mdcaller:hover {
+    color: $color-err;
+}
+
+.transcross {
+    color: $color-err;
+    transition: all 1s ease;
+    i {
+        transform: rotate(45deg);
+    }
+}
+
+.err {
+    border: 1px solid $color-err !important;
+}
+
+.errmsg {
+    color: $color-err;
+}
+
+.offcanvas-end {
+    width: 600px;
+    max-width: 100%;
+}
+
+.toast-box {
+    top: 110px;
+}
+.toast .btn-close {
+    top: 10px !important;
+    right: 10px !important;
+}
+
+.offcanvas-header{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-check-input:checked {
+    background-color: $color-p !important;
+    border-color: $color-p !important;
+}
+
+.form-check-input+label{
+    cursor: pointer;
+}
+.form-check-input:checked+label {
+    color: $color-p !important;
+}
+
+#authBox{
+    #loginLeft{
+        background-color: $color-light;
+    }
+    #loginLeft,
+    #loginRight{
+        width: 50%;
+        height: 100vh;
+    }
+    #loginformbox{
+        height: 100vh;
+    }
+    #loginRight{
+        background:linear-gradient(rgba($color-p,.8), rgba($color-p,.8)), url('../images/loginbg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        
+    }
 }

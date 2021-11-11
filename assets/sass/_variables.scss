@@ -5,10 +5,11 @@ $color-grey: #a8b0c9;
 $color-litegrey: #f8f8f8;
 $color-light: #fff;
 $color-dark: #000;
-$color-success: #1AB156;
+$color-success: #1ab156;
 $color-err: #f64e4e;
 $color-sidebar-p: #17203f;
 $color-sidebar-s: #273050;
+$color-gold: #e19e39;
 
 //Effects
 
@@ -32,6 +33,9 @@ $color-sidebar-s: #273050;
 .bg-p {
     background-color: $color-p;
 }
+.bg-success {
+    background-color: $color-success;
+}
 .txt-p {
     color: $color-p;
 }
@@ -40,6 +44,18 @@ $color-sidebar-s: #273050;
 }
 .txt-grey {
     color: $color-grey;
+}
+.txt-success {
+    color: $color-success;
+}
+.txt-err {
+    color: $color-err;
+}
+.txt-gold {
+    color: $color-gold;
+}
+.txt-dark {
+    color: $color-dark;
 }
 
 // Fonts:
@@ -97,7 +113,7 @@ $color-sidebar-s: #273050;
 }
 .h-xxxl {
     font-size: 42px !important;
-    line-height: 80px;
+    line-height: 30px;
 }
 
 // Buttons
@@ -110,6 +126,18 @@ $color-sidebar-s: #273050;
     border-radius: 5px !important;
     border: none;
     padding: 15px 30px !important;
+}
+
+.btn-default {
+    background: $color-light;
+    box-shadow: 0 0 5px #8aa4af4d;
+    padding: 15px 20px !important;
+    min-width: none;
+    width: auto;
+
+    &:hover {
+        color: $color-p;
+    }
 }
 
 .btn-p {
@@ -136,7 +164,7 @@ $color-sidebar-s: #273050;
     background: transparent;
     color: $color-dark !important;
     border: 1px solid $color-p;
-    &:hover{
+    &:hover {
         background: $color-p;
         border-color: $color-p;
         color: $color-light !important;
@@ -146,12 +174,12 @@ $color-sidebar-s: #273050;
 .btn-outline-success {
     border: 1px solid $color-success !important;
     color: $color-success;
-    &:hover{
+    &:hover {
         background: $color-success;
         border-color: $color-p;
         color: $color-light !important;
     }
-    &[disabled]{
+    &[disabled] {
         color: $color-grey !important;
         border-color: $color-grey !important;
     }
@@ -193,7 +221,16 @@ a .link-light {
     }
 }
 
-a{
+.link-dark a,
+a .link-dark {
+    color: $color-dark;
+    &:hover {
+        color: $color-p;
+        text-decoration: none;
+    }
+}
+
+a {
     text-decoration: none;
 }
 
@@ -205,6 +242,10 @@ a{
 .w100,
 .w100 * {
     width: 100%;
+}
+
+.mh80 {
+    min-height: 80vh;
 }
 
 .form-group {
@@ -223,3 +264,5 @@ a{
         z-index: 4;
     }
 }
+
+

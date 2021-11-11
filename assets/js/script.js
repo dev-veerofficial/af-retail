@@ -16,26 +16,26 @@ asideTogglr.on('click', function () {
 
 
 // Date Range picker for dashboard
-// $(function () {
-//   $('input[name="daterange"]').daterangepicker({
-//     opens: 'left'
-//   }, function (start, end, label) {
-//     console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
-//   });
-// });
+$(function () {
+  $('input[name="daterange"]').daterangepicker({
+    opens: 'left'
+  }, function (start, end, label) {
+    console.log("A new date selection was made: " + start.format('YYYY-MM-DD') + ' to ' + end.format('YYYY-MM-DD'));
+  });
+});
 
-// //   Single date picker
-// $(function () {
-//   $('input[name="delivery"]').daterangepicker({
-//     singleDatePicker: true,
-//     showDropdowns: true,
-//     minYear: 1901,
-//     maxYear: parseInt(moment().format('YYYY'), 10)
-//   }, function (start, end, label) {
-//     var years = moment().diff(start, 'years');
-//     //   alert("You are " + years + " years old!");
-//   });
-// });
+//   Single date picker
+$(function () {
+  $('input[name="delivery"]').daterangepicker({
+    singleDatePicker: true,
+    showDropdowns: true,
+    minYear: 1901,
+    maxYear: parseInt(moment().format('YYYY'), 10)
+  }, function (start, end, label) {
+    var years = moment().diff(start, 'years');
+    //   alert("You are " + years + " years old!");
+  });
+});
 
 
 // show form Panel
@@ -58,3 +58,19 @@ $('li.dd').on('click', function () {
     $(this).children('ul').stop().slideToggle(100);
   }
 })
+
+// master plan notes
+
+$('.mdcaller').on('click',function(){
+  $(this).toggleClass('transcross');
+  $(this).siblings('.mdmc').toggle();
+})
+
+function showToast(id) {
+  // var toastID = "#"+id
+  $('#'+id).toast('show');
+};
+
+var iputText = $('input[type="text"]');
+var iputText = $('input[type="text"]');
+var iputText = $('input[type="text"]');

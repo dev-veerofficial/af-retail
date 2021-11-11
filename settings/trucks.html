@@ -21,6 +21,7 @@
 
 <body>
     <div id="wrapper">
+
         <div class="container-fluid p-0">
             <!-- Navbar -->
             <nav class="navbar navbar-expand-lg fixed-top">
@@ -139,8 +140,10 @@
                                 </div>
                             </div>
                             <div class="col-3 d-flex align-items-end justify-content-end align-self-end">
-                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()" class="btn btn-p btn-capsule">+ Add Truck</a>
-                            </div>                           
+                                <a href="javascript:void(0);" id="panelCaller" class="btn btn-p btn-capsule"
+                                    data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight"
+                                    aria-controls="offcanvasRight">+ Add Truck</a>
+                            </div>
                         </div>
                         <!--  -->
                         <div class="table-responsive">
@@ -162,26 +165,28 @@
                                         <td>Barry Ring</td>
                                         <td>Admin</td>
                                         <td>b.ring@example.com</td>
-                                        <td>Kinsealey <span class="txt-grey"><small>(Updated on 26 Aug 2021, 12:08PM)</small></span></td>
+                                        <td>Kinsealey <span class="txt-grey"><small>(Updated on 26 Aug 2021,
+                                                    12:08PM)</small></span></td>
                                         <td>
                                             <a href="#" class="me-3 text-warning"><i class="fa fa-pen"></i></a>
                                             <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
                                     </tr>
-                                    <!--  -->                                    
+                                    <!--  -->
                                     <tr>
                                         <td>1</td>
                                         <td>Barry Ring</td>
                                         <td>Admin</td>
                                         <td>b.ring@example.com</td>
-                                        <td>Kinsealey <span class="txt-grey"><small>(Updated on 26 Aug 2021, 12:08PM)</small></span></td>
+                                        <td>Kinsealey <span class="txt-grey"><small>(Updated on 26 Aug 2021,
+                                                    12:08PM)</small></span></td>
                                         <td>
                                             <a href="#" class="me-3 text-warning"><i class="fa fa-pen"></i></a>
                                             <a href="#"><i class="fa fa-trash text-danger"></i></a>
                                         </td>
                                     </tr>
-                                    <!--  -->                                    
-                                                                     
+                                    <!--  -->
+
                                 </tbody>
                             </table>
                         </div>
@@ -189,64 +194,88 @@
                 </div>
             </div>
             <!--  -->
+
+            <!--  -->
         </div>
-        <!-- Form Sidebar -->
-        <aside id="formaside" class="userformpanel">
-            <div class="panel">
-                <div class="panel-header">
-                    <div class="row p-4">
-                        <div class="col-6">
-                            <h5>Add Truck</h5>
+        <!-- OffCanvas -->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+            <div class="offcanvas-header">
+                <h5 id="offcanvasRightLabel">Add Truck</h5>
+                <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"
+                    aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+                <div class="row"><strong>Basic Details</strong></div>
+                <div class="row ">
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Truck Name</label>
+                            <input type="text" class="form-control err">
                         </div>
-                        <div class="col-6 d-flex justify-content-end">
-                           <a href="javascript:void(0);" id="panelclosr" onclick="closeFormPanel()"><i class="icon icon-close"></i></a>
+                        <span class="errmsg"><small class="para-xs">This field is required</small></span>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Blue Tree ID</label>
+                            <input type="text" class="form-control err">
+                        </div>
+                        <span class="errmsg"><small class="para-xs">This field is required</small></span>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Owner</label>
+                            <select name="" id="" class="form-control">
+                                <option value="" selected disabled>Select Owner</option>
+                                <option value="">Owner 1</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-6">
+                        <div class="form-group">
+                            <label for="">Category</label>
+                            <select name="" id="" class="form-control">
+                                <option value="" selected disabled>Select Category</option>
+                                <option value="">Category 1</option>
+                            </select>
                         </div>
                     </div>
                 </div>
-                <div class="panel-body px-4 pt-4">
-                    <div class="row"><strong>Basic Details</strong></div>
-                    <div class="row ">
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Truck Name</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Blue Tree ID</label>
-                                <input type="text" class="form-control">
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Owner</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="" selected disabled>Select Owner</option>
-                                    <option value="">Owner 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        <div class="col-6">
-                            <div class="form-group">
-                                <label for="">Category</label>
-                                <select name="" id="" class="form-control">
-                                    <option value="" selected disabled>Select Category</option>
-                                    <option value="">Category 1</option>
-                                </select>
-                            </div>
-                        </div>
-                        
-                    </div>
-                    <div class="row mt-4">
-                        <a href="#" class="btn btn-p btn-outline-p btn-capsule mx-2" onclick="closeFormPanel()">Cancel</a>
-                        <a href="#" class="btn btn-p btn-capsule mx-2">Add New Truck</a>
-                    </div>
+                <div class="row mt-4">
+                    <a href="#" class="btn btn-p btn-outline-p btn-capsule mx-2" class="btn-close text-reset"
+                        data-bs-dismiss="offcanvas" aria-label="Close" onclick="showToast('formError')">Cancel</a>
+                    <a href="#" class="btn btn-p btn-capsule mx-2" onclick="showToast('formSuccess')"
+                        data-bs-dismiss="offcanvas" aria-label="Close">Add New Truck</a>
                 </div>
             </div>
-        </aside>
+        </div>
+        <!-- Success Toast Message -->
+        <div class="position-fixed end-0 m-3 toast-box" style="z-index: 1031">
+            <div id="formSuccess" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                data-bs-autohide="false">
+                <div class="toast-body text-light bg-success">
+                    <h6> <i class="fa fa-check-circle"></i> Success</h6>
+                    <p>Yayy !! Form Submitted Successfully.</p>
+                    <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
+        <!-- Error Toast Message -->
+        <div class="position-fixed end-0 m-3 toast-box" style="z-index: 1031">
+            <div id="formError" class="toast" role="alert" aria-live="assertive" aria-atomic="true"
+                data-bs-autohide="false">
+                <div class="toast-body text-light bg-danger">
+                    <h6> <i class="fa fa-exclamation-circle"></i> Error</h6>
+                    <p>Oops !! Something Went Wrong. Please Try Again.</p>
+                    <button type="button" class="btn-close position-absolute end-0" data-bs-dismiss="toast"
+                        aria-label="Close"></button>
+                </div>
+            </div>
+        </div>
         <!--  -->
     </div>
+
+
     <!-- JavaScript -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"

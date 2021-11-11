@@ -54,12 +54,18 @@
                                     <strong>Mike Parker</strong>
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                                    <li><a class="dropdown-item" href="#">Show All</a></li>
                                     <li>
                                         <hr class="dropdown-divider">
                                     </li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Finalized Only</a></li>
+                                    <li><a class="dropdown-item" href="#">Not Finalized Only</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li><a class="dropdown-item" href="#">Notifications Pending</a></li>
+                                    <li><a class="dropdown-item" href="#">AM Notifications Sent</a></li>
+                                    <li><a class="dropdown-item" href="#">PM Notifications Sent</a></li>
                                 </ul>
                             </li>
                             <li class="nav-item">
@@ -120,47 +126,80 @@
                     </div>
                 </div>
             </aside>
-            <!--  -->           
+            <!--  -->
             <div class="container-fluid bg-transparent content-wrapper px-4 mt-3">
-                <div class="card">
+                <div class="card mh80">
                     <div class="card-header pt-4">
                         <h4>Master Plan</h4>
                     </div>
                     <div class="card-body">
-                        <div class="row mb-5">
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Search</label>
-                                    <input type="text" class="form-control" placeholder="Destination, Created by...">
+                        <div class="row mb-5 justify-content-between">
+                            <div class="col-4">
+                                <div class="row">
+                                    <div class="col-5">
+                                        <div class="form-group">
+                                            <label for="">Search</label>
+                                            <input type="date" class="form-control" placeholder="Today">
+                                        </div>
+                                    </div>
+                                    <div class="col-5   ">
+                                        <div class="form-group">
+                                            <label for="">Search</label>
+                                            <input type="text" class="form-control" placeholder="Search...">
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Range</label>
-                                    <input type="text" name="daterange" class="form-control" placeholder="Select Date">
+                            <div class="col-8 d-flex align-items-end justify-content-end align-self-end">
+                                <button href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()"
+                                    class="btn btn-default mx-1" disabled><i class="fa fa-save"></i>
+                                    <span>Save all Changes</span>
+                                </button>
+                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()"
+                                    class="btn btn-default mx-1"><i class="fa fa-bell txt-gold"></i>
+                                    <span>AM Notifications</span>
+                                </a>
+                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()"
+                                    class="btn btn-default mx-1"><i class="fa fa-bell txt-gold"></i>
+                                    <span>PM Notifications</span>
+                                </a>
+                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()"
+                                    class="btn btn-default mx-1"><i class="fa fa-check-double txt-success"></i>
+                                    <span>Finalize Plan</span>
+                                </a>
+                                <div class="dropdown">
+                                    <button class="btn btn-default dropdown-toggle" type="button"
+                                        id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                        <i class="fa fa-filter"></i> Filter: <span>None</span>
+                                    </button>
+                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                                        <li><a class="dropdown-item" href="#">Show All</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Finalized Only</a></li>
+                                        <li><a class="dropdown-item" href="#">Not Finalized Only</a></li>
+                                        <li>
+                                            <hr class="dropdown-divider">
+                                        </li>
+                                        <li><a class="dropdown-item" href="#">Notifications Pending</a></li>
+                                        <li><a class="dropdown-item" href="#">AM Notifications Sent</a></li>
+                                        <li><a class="dropdown-item" href="#">PM Notifications Sent</a></li>
+                                    </ul>
                                 </div>
-                            </div>
-                            <div class="col-2">
-                                <div class="form-group">
-                                    <label for="">Order Status</label>
-                                    <select name="" id="" class="form-control">
-                                        <option value="" selected>All Orders</option>
-                                        <option value="">Completed</option>
-                                        <option value="">Pending</option>
-                                        <option value="">Cancelled</option>
-                                    </select>
-                                </div>
+                                <a href="javascript:void(0);" id="panelCaller" onclick="showFormPanel()"
+                                    class="btn btn-default mx-1"><i class="fa fa-download"></i></a>
                             </div>
                         </div>
-                        <div class="table-responsive">
+                        <div class="table-responsive table-mplan">
                             <table class="table table-striped-inactive table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Delivery Date</th>
-                                        <th>Terminal to Destination</th>
-                                        <th>Driver & Fleet</th>
+                                        <th>#</th>
+                                        <th>Destination</th>
+                                        <th>Terminal</th>
+                                        <th>Seq. No.</th>
                                         <th>BOL</th>
-                                        <th>Order</th>
                                         <th>Diesel</th>
                                         <th>Prem Derv</th>
                                         <th>E5</th>
@@ -168,212 +207,287 @@
                                         <th>D2</th>
                                         <th>SFGO</th>
                                         <th>Kerosene</th>
-                                        <th>Status</th>
+                                        <th>Driver</th>
+                                        <th>Fleet</th>
+                                        <th>Trailer</th>
+                                        <th>Order</th>
+                                        <th>Shift</th>
                                         <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>19 Oct 2021 <i class="fa fa-calendar"></i> </td>
-                                        <td>Foynes to <br> <small class="txt-grey">Dundalk Carrick Road</small></td>
-                                        <td>Aiden Grey <br> <small class="txt-grey">PWT 715 - 161 D 5523</small></td>
-                                        <td>BOL456123 <br> <small class="txt-grey">Time 00:00</small></td>
                                         <td>1</td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
+                                        <td>Dundalk
+                                            <span class="mp-notebox d-inline-block mx-1">
+                                                <i class="fa fa-sticky-note txt-grey"></i>
+                                                <span class="mp-note">
+                                                    <strong>Delivery Note:</strong> <br>
+                                                    <p>
+                                                        Please deliver this sequence ASAP and call us once its done !!
+                                                        We've another order in queue for you.
+                                                    </p>
+                                                </span>
+                                            </span>
                                         </td>
+                                        <td>Foynes</td>
+                                        <td>139227 <i class="fa fa-check-double txt-success"></i> </td>
+                                        <td>BOL123456</td>
+                                        <td><span class="">30K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="">5K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td>Brian Rawley <span class="txt-gold"> <button class="btn btn-sm txt-gold" style="padding: 0 !important;"><i class="fa fa-bell"></i></button></span></td>
+                                        <td>PWT 720</td>
+                                        <td>12LH 369</td>
+                                        <td>1</td>
+                                        <td>AM</td>
                                         <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-
-                                        <td> <span class="status text-warning">Pending</span> </td>
-                                        <td> <a href="" class="btn btn-sm btn-p btn-outline-p btn-capsule">Delivered</a>
+                                            <span class="para-xl mdmcbox">
+                                                <a href="javascript:void(0);" class="mdcaller"><i
+                                                        class="fa fa-plus-circle"></i></a>
+                                                <div class="mdmc">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio1"
+                                                                    value="option1">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio1">MD</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio2"
+                                                                    value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio2">MC</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Sequence No."
+                                                                    aria-label="Enter Sequence No."
+                                                                    aria-describedby="button-addon2">
+                                                                <button class="btn btn-outline-secondary bg-success"
+                                                                    type="button" id="button-addon2"><i
+                                                                        class="fa fa-check"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            </span>
+                                            <span class="para-xl mx-2"><a href="javascript:void(0);">
+                                                <i class="fa fa-save txt-success"></i></a>
+                                            </span>
+                                            <span class="para-xl">
+                                                <a href="javascript:void(0);">
+                                                    <i class="fa fa-calendar-alt txt-dark"></i>
+                                                </a>
+                                            </span>
                                         </td>
                                     </tr>
                                     <!--  -->
                                     <tr>
-                                        <td>19 Oct 2021 <i class="fa fa-calendar"></i> </td>
-                                        <td>Foynes to <br> <small class="txt-grey">Dundalk Carrick Road</small></td>
-                                        <td>Aiden Grey <br> <small class="txt-grey">PWT 715 - 161 D 5523</small></td>
-                                        <td>BOL456123 <br> <small class="txt-grey">Time 00:00</small></td>
                                         <td>1</td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
+                                        <td>Dundalk
+                                            <span class="mp-notebox d-inline-block mx-1">
+                                                <i class="fa fa-sticky-note txt-grey"></i>
+                                                <span class="mp-note">
+                                                    <strong>Delivery Note:</strong> <br>
+                                                    <p>
+                                                        Please deliver this sequence ASAP and call us once its done !!
+                                                        We've another order in queue for you.
+                                                    </p>
+                                                </span>
+                                            </span>
                                         </td>
+                                        <td>Foynes</td>
+                                        <td>139227 <i class="fa fa-check-double txt-success"></i> </td>
+                                        <td>BOL123456</td>
+                                        <td><span class="">30K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="">5K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
                                         <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-
-                                        <td> <span class="status text-warning">Pending</span> </td>
-                                        <td> <a href="" class="btn btn-sm btn-p btn-outline-p btn-capsule">Delivered</a>
+                                            <span class="para-xl">
+                                                <a href="javascript:void(0);" class="txt-err"><i class="fa fa-minus-circle"></i></a>
+                                            </span>
+                                            <span class="para-xl mx-2"><a href="javascript:void(0);">
+                                                <i class="fa fa-save txt-grey"></i></a>
+                                            </span>
+                                            <span class="para-xl">
+                                                <a href="javascript:void(0);">
+                                                    <i class="fa fa-calendar-alt txt-dark"></i>
+                                                </a>
+                                            </span>
                                         </td>
                                     </tr>
                                     <!--  -->
                                     <tr>
-                                        <td>19 Oct 2021 <i class="fa fa-calendar"></i> </td>
-                                        <td>Foynes to <br> <small class="txt-grey">Dundalk Carrick Road</small></td>
-                                        <td>Aiden Grey <br> <small class="txt-grey">PWT 715 - 161 D 5523</small></td>
-                                        <td>BOL456123 <br> <small class="txt-grey">Time 00:00</small></td>
                                         <td>1</td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
+                                        <td>Dundalk
+                                            <span class="mp-notebox d-inline-block mx-1">
+                                                <i class="fa fa-sticky-note txt-grey"></i>
+                                                <span class="mp-note">
+                                                    <strong>Delivery Note:</strong> <br>
+                                                    <p>
+                                                        Please deliver this sequence ASAP and call us once its done !!
+                                                        We've another order in queue for you.
+                                                    </p>
+                                                </span>
+                                            </span>
                                         </td>
+                                        <td>Foynes</td>
+                                        <td>139227 <i class="fa fa-check-double txt-success"></i> </td>
+                                        <td>BOL123456</td>
+                                        <td><span class="">30K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="">5K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td>Brian Rawley <span class="txt-gold"> <button class="btn btn-sm txt-grey" style="padding: 0 !important;" disabled><i class="fa fa-bell"></i></button></span></td>
+                                        <td>PWT 720</td>
+                                        <td>12LH 369</td>
+                                        <td>1</td>
+                                        <td>AM</td>
                                         <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
+                                            <span class="para-xl mdmcbox">
+                                                <a href="javascript:void(0);" class="mdcaller"><i
+                                                        class="fa fa-plus-circle"></i></a>
+                                                <div class="mdmc">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio1"
+                                                                    value="option1">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio1">MD</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio2"
+                                                                    value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio2">MC</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Sequence No."
+                                                                    aria-label="Enter Sequence No."
+                                                                    aria-describedby="button-addon2">
+                                                                <button class="btn btn-outline-secondary bg-success"
+                                                                    type="button" id="button-addon2"><i
+                                                                        class="fa fa-check"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            </span>
+                                            <span class="para-xl mx-2"><a href="javascript:void(0);">
+                                                <i class="fa fa-save txt-grey"></i></a>
+                                            </span>
+                                            <span class="para-xl">
+                                                <a href="javascript:void(0);">
+                                                    <i class="fa fa-calendar-alt txt-dark"></i>
+                                                </a>
+                                            </span>
                                         </td>
+                                    </tr>
+                                    <!--  -->
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Dundalk
+                                            <span class="mp-notebox d-inline-block mx-1">
+                                                <i class="fa fa-sticky-note txt-grey"></i>
+                                                <span class="mp-note">
+                                                    <strong>Delivery Note:</strong> <br>
+                                                    <p>
+                                                        Please deliver this sequence ASAP and call us once its done !!
+                                                        We've another order in queue for you.
+                                                    </p>
+                                                </span>
+                                            </span>
+                                        </td>
+                                        <td>Foynes</td>
+                                        <td>139227 <i class="fa fa-check-double txt-success"></i> </td>
+                                        <td>BOL123456</td>
+                                        <td><span class="">30K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="">5K</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td><span class="txt-grey">0</span></td>
+                                        <td>Brian Rawley <span class="txt-gold"> <button class="btn btn-sm txt-gold" style="padding: 0 !important;"><i class="fa fa-bell"></i></button></span></td>
+                                        <td>PWT 720</td>
+                                        <td>12LH 369</td>
+                                        <td>1</td>
+                                        <td>AM</td>
                                         <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1">
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-                                        <td>
-                                            <div class="table-input">
-                                                <span>N:</span>
-                                                <input type="text" class="form-control" placeholder="0"
-                                                    aria-label="Username" aria-describedby="basic-addon1" disabled>
-                                            </div>
-                                            <div class="para-sm txt-grey "> G: <span class="gross">3000</span></div>
-                                        </td>
-
-                                        <td> <span class="status text-warning">Pending</span> </td>
-                                        <td> <a href="" class="btn btn-sm btn-p btn-outline-p btn-capsule">Delivered</a>
+                                            <span class="para-xl mdmcbox">
+                                                <a href="javascript:void(0);" class="mdcaller"><i
+                                                        class="fa fa-plus-circle"></i></a>
+                                                <div class="mdmc">
+                                                    <div class="row">
+                                                        <div class="col-12">
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio1"
+                                                                    value="option1">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio1">MD</label>
+                                                            </div>
+                                                            <div class="form-check form-check-inline para-reg">
+                                                                <input class="form-check-input" type="radio"
+                                                                    name="inlineRadioOptions" id="inlineRadio2"
+                                                                    value="option2">
+                                                                <label class="form-check-label"
+                                                                    for="inlineRadio2">MC</label>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-12">
+                                                            <div class="input-group mb-3">
+                                                                <input type="text" class="form-control"
+                                                                    placeholder="Enter Sequence No."
+                                                                    aria-label="Enter Sequence No."
+                                                                    aria-describedby="button-addon2">
+                                                                <button class="btn btn-outline-secondary bg-success"
+                                                                    type="button" id="button-addon2"><i
+                                                                        class="fa fa-check"></i></button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </span>
+                                            </span>
+                                            <span class="para-xl mx-2"><a href="javascript:void(0);">
+                                                <i class="fa fa-save txt-grey"></i></a>
+                                            </span>
+                                            <span class="para-xl">
+                                                <a href="javascript:void(0);">
+                                                    <i class="fa fa-calendar-alt txt-dark"></i>
+                                                </a>
+                                            </span>
                                         </td>
                                     </tr>
                                     <!--  -->
@@ -384,7 +498,7 @@
                 </div>
             </div>
             <!--  -->
-           
+
         </div>
     </div>
     <!-- JavaScript -->
@@ -392,8 +506,8 @@
     <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.min.js"
         integrity="sha256-hlKLmzaRlE8SCJC1Kw8zoUbU8BxA+8kR3gseuKfMjxA=" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"></script>    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@3.6.0/dist/chart.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>

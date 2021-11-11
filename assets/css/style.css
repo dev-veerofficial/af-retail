@@ -22,6 +22,10 @@
   background-color: #ff6934;
 }
 
+.bg-success {
+  background-color: #1ab156;
+}
+
 .txt-p {
   color: #ff6934;
 }
@@ -32,6 +36,22 @@
 
 .txt-grey {
   color: #a8b0c9;
+}
+
+.txt-success {
+  color: #1ab156;
+}
+
+.txt-err {
+  color: #f64e4e;
+}
+
+.txt-gold {
+  color: #e19e39;
+}
+
+.txt-dark {
+  color: #000;
 }
 
 .font-pop, .pop-lite, .btn, .pop-reg, .pop-heavy, .card .card-header:not(.bg-p), .btn-strong {
@@ -96,7 +116,7 @@
 
 .h-xxxl {
   font-size: 42px !important;
-  line-height: 80px;
+  line-height: 30px;
 }
 
 .btn {
@@ -106,6 +126,17 @@
   border-radius: 5px !important;
   border: none;
   padding: 15px 30px !important;
+}
+
+.btn-default {
+  background: #fff;
+  box-shadow: 0 0 5px #8aa4af4d;
+  padding: 15px 20px !important;
+  min-width: none;
+  width: auto;
+}
+.btn-default:hover {
+  color: #ff6934;
 }
 
 .btn-p {
@@ -136,11 +167,11 @@
 }
 
 .btn-outline-success {
-  border: 1px solid #1AB156 !important;
-  color: #1AB156;
+  border: 1px solid #1ab156 !important;
+  color: #1ab156;
 }
 .btn-outline-success:hover {
-  background: #1AB156;
+  background: #1ab156;
   border-color: #ff6934;
   color: #fff !important;
 }
@@ -187,6 +218,16 @@ a .link-light:hover {
   text-decoration: none;
 }
 
+.link-dark a,
+a .link-dark {
+  color: #000;
+}
+.link-dark a:hover,
+a .link-dark:hover {
+  color: #ff6934;
+  text-decoration: none;
+}
+
 a {
   text-decoration: none;
 }
@@ -194,6 +235,10 @@ a {
 .w100,
 .w100 * {
   width: 100%;
+}
+
+.mh80 {
+  min-height: 80vh;
 }
 
 .form-group {
@@ -322,7 +367,6 @@ select {
 .card {
   border-radius: 10px;
   border: none;
-  overflow: hidden;
 }
 .card .card-header:not(.bg-p) {
   background-color: #fff;
@@ -456,6 +500,7 @@ ul.order-brief li {
 }
 
 #formaside {
+  display: none;
   position: fixed;
   top: 0;
   right: 0;
@@ -487,6 +532,149 @@ table tbody tr:nth-child(odd) {
 
 thead th {
   padding: 10px !important;
+}
+
+.mp-notebox {
+  position: absolute;
+  cursor: pointer;
+}
+.mp-notebox:hover .mp-note {
+  display: block;
+}
+.mp-notebox:hover i {
+  color: #ff6934;
+}
+
+.mp-note {
+  display: none;
+  position: relative;
+  padding: 10px;
+  max-width: 350px;
+  background: #fff;
+  border: 1px solid #b9d2dc;
+  border-radius: 0 10px 10px 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  z-index: 9998;
+}
+
+.table-mplan {
+  overflow: visible;
+}
+
+.mdmcbox {
+  position: relative;
+}
+
+.mdmc {
+  display: none;
+  position: absolute;
+  left: -80px;
+  top: 40px;
+  padding: 10px;
+  width: 220px;
+  max-width: 200px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.15);
+  transition: all 0.5s ease;
+  z-index: 9999;
+}
+.mdmc:after {
+  width: 0;
+  height: 0;
+  border-width: 0 15px 21px 15px;
+  border-color: transparent transparent #fff transparent;
+  border-style: solid;
+  position: absolute;
+  top: -15px;
+  left: 80px;
+  content: " ";
+}
+.mdmc .input-group {
+  margin-top: 5px;
+}
+.mdmc .input-group input {
+  max-width: 150px;
+  height: 30px;
+  font-size: 14px;
+}
+.mdmc .input-group button {
+  height: 30px;
+  width: 30px;
+  line-height: 10px !important;
+  min-width: none;
+  padding: 0px !important;
+  color: #fff;
+  border-top-left-radius: 0 !important;
+  border-bottom-left-radius: 0 !important;
+}
+
+.mdcaller:hover {
+  color: #f64e4e;
+}
+
+.transcross {
+  color: #f64e4e;
+  transition: all 1s ease;
+}
+.transcross i {
+  transform: rotate(45deg);
+}
+
+.err {
+  border: 1px solid #f64e4e !important;
+}
+
+.errmsg {
+  color: #f64e4e;
+}
+
+.offcanvas-end {
+  width: 600px;
+  max-width: 100%;
+}
+
+.toast-box {
+  top: 110px;
+}
+
+.toast .btn-close {
+  top: 10px !important;
+  right: 10px !important;
+}
+
+.offcanvas-header {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.form-check-input:checked {
+  background-color: #ff6934 !important;
+  border-color: #ff6934 !important;
+}
+
+.form-check-input + label {
+  cursor: pointer;
+}
+
+.form-check-input:checked + label {
+  color: #ff6934 !important;
+}
+
+#authBox #loginLeft {
+  background-color: #fff;
+}
+#authBox #loginLeft,
+#authBox #loginRight {
+  width: 50%;
+  height: 100vh;
+}
+#authBox #loginformbox {
+  height: 100vh;
+}
+#authBox #loginRight {
+  background: linear-gradient(rgba(255, 105, 52, 0.8), rgba(255, 105, 52, 0.8)), url("../images/loginbg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 /*# sourceMappingURL=style.css.map */
