@@ -71,6 +71,18 @@ function showToast(id) {
   $('#'+id).toast('show');
 };
 
-var iputText = $('input[type="text"]');
-var iputText = $('input[type="text"]');
-var iputText = $('input[type="text"]');
+// Schedule Deliveries
+
+function drag(ev) {
+  ev.dataTransfer.setData("text", ev.target.id);
+  console.log('We started Dragging.'+ ev.target.id);
+}
+function allowDrop(ev) {
+  ev.preventDefault();
+}
+
+function drop(ev) {
+  ev.preventDefault();
+  var data = ev.dataTransfer.getData("text");
+  ev.target.appendChild(document.getElementById(data));
+}

@@ -54,6 +54,10 @@
   color: #000;
 }
 
+.txt-luminous {
+  color: #A4938D;
+}
+
 .font-pop, .pop-lite, .btn, .pop-reg, .pop-heavy, .card .card-header:not(.bg-p), .btn-strong {
   font-family: "Poppins", sans-serif;
 }
@@ -675,6 +679,28 @@ thead th {
   background: linear-gradient(rgba(255, 105, 52, 0.8), rgba(255, 105, 52, 0.8)), url("../images/loginbg.png");
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.transcard {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+.transcard .dragcard {
+  cursor: grab;
+  border-radius: 5px;
+}
+
+.dropcard {
+  border-radius: 5px;
+}
+.dropcard .dragcard {
+  background: #ff6934;
+  border-radius: 5px;
+  box-shadow: none;
+  color: #fff;
+}
+.dropcard .dragcard i {
+  display: none !important;
 }
 
 /*# sourceMappingURL=style.css.map */

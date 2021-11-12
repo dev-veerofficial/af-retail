@@ -451,3 +451,26 @@ thead th {
         
     }
 }
+
+.transcard{
+    background-color: rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+
+    .dragcard{
+        cursor: grab;
+        border-radius: 5px;
+    }
+}
+
+.dropcard{
+    border-radius: 5px;
+    .dragcard{
+        background: $color-p;
+        border-radius: 5px;
+        box-shadow: none;
+        color: #fff;
+        i{
+            display: none !important;
+        }
+    }
+}

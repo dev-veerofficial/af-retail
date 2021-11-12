@@ -10,6 +10,7 @@ $color-err: #f64e4e;
 $color-sidebar-p: #17203f;
 $color-sidebar-s: #273050;
 $color-gold: #e19e39;
+$color-luminous: #A4938D;
 
 //Effects
 
@@ -57,6 +58,11 @@ $color-gold: #e19e39;
 .txt-dark {
     color: $color-dark;
 }
+.txt-luminous{
+    color: $color-luminous;
+}
+
+
 
 // Fonts:
 .font-pop {
