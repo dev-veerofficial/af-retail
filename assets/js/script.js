@@ -10,6 +10,11 @@ asideTogglr.on('click', function () {
   sidemenu.toggleClass('collapsed');
   if(sidemenu.hasClass('collapsed')){
     $('li.dd>ul').hide();
+    $('.powered-text').hide();
+    $('.powered-logo').addClass('collapsed');
+  } else{
+    $('.powered-text').show();
+    $('.powered-logo').removeClass('collapsed');
   }
 })
 

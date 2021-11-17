@@ -440,6 +440,11 @@ nav .btn-nav {
 #sidemenu a i {
   margin-right: 10px;
 }
+#sidemenu ul {
+  max-height: 86vh !important;
+  overflow: hidden;
+  overflow-y: auto;
+}
 #sidemenu ul ul {
   background-color: #273050;
   padding: 0;
@@ -701,6 +706,29 @@ thead th {
 }
 .dropcard .dragcard i {
   display: none !important;
+}
+
+.powered {
+  position: absolute !important;
+  bottom: 0 !important;
+}
+
+.powered-logo {
+  display: inline-block;
+  width: 40%;
+  margin-left: 10px;
+}
+
+.powered-logo.collapsed {
+  width: 100%;
+  margin: 0;
+}
+
+.powered-text {
+  display: none;
+}
+.powered-text a {
+  padding: 0 !important;
 }
 
 /*# sourceMappingURL=style.css.map */

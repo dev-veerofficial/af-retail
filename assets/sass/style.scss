@@ -183,6 +183,9 @@ nav {
         }
     }
     ul {
+        max-height: 86vh !important;
+        overflow: hidden;
+        overflow-y: auto;
         ul {
             background-color: $color-sidebar-s;
             padding: 0;
@@ -416,7 +419,7 @@ thead th {
     right: 10px !important;
 }
 
-.offcanvas-header{
+.offcanvas-header {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
@@ -425,52 +428,74 @@ thead th {
     border-color: $color-p !important;
 }
 
-.form-check-input+label{
+.form-check-input + label {
     cursor: pointer;
 }
-.form-check-input:checked+label {
+.form-check-input:checked + label {
     color: $color-p !important;
 }
 
-#authBox{
-    #loginLeft{
+#authBox {
+    #loginLeft {
         background-color: $color-light;
     }
     #loginLeft,
-    #loginRight{
+    #loginRight {
         width: 50%;
         height: 100vh;
     }
-    #loginformbox{
+    #loginformbox {
         height: 100vh;
     }
-    #loginRight{
-        background:linear-gradient(rgba($color-p,.8), rgba($color-p,.8)), url('../images/loginbg.png');
+    #loginRight {
+        background: linear-gradient(rgba($color-p, 0.8), rgba($color-p, 0.8)), url("../images/loginbg.png");
         background-repeat: no-repeat;
         background-size: cover;
-        
     }
 }
 
-.transcard{
+.transcard {
     background-color: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 
-    .dragcard{
+    .dragcard {
         cursor: grab;
         border-radius: 5px;
     }
 }
 
-.dropcard{
+.dropcard {
     border-radius: 5px;
-    .dragcard{
+    .dragcard {
         background: $color-p;
         border-radius: 5px;
         box-shadow: none;
         color: #fff;
-        i{
+        i {
             display: none !important;
         }
+    }
+}
+
+.powered {
+    position: absolute !important;
+    bottom: 0 !important;
+}
+
+.powered-logo {
+    display: inline-block;
+    width: 40%;
+    margin-left: 10px;
+}
+
+.powered-logo.collapsed {
+    width: 100%;
+    margin: 0;
+}
+
+.powered-text {
+    display: none;
+    a {
+        padding: 0 !important;
     }
 }
