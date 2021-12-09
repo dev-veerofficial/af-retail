@@ -22,8 +22,20 @@
   background-color: #ff6934;
 }
 
+.bg-p-lite {
+  background-color: #fcf0eb;
+}
+
 .bg-success {
   background-color: #1ab156;
+}
+
+.bg-darkgreen {
+  background-color: #375E6E;
+}
+
+.bg-litegreen {
+  background-color: #E4F2F8;
 }
 
 .txt-p {
@@ -56,6 +68,10 @@
 
 .txt-luminous {
   color: #A4938D;
+}
+
+.txt-darkgreen {
+  color: #375E6E;
 }
 
 .font-pop, .pop-lite, .btn, .pop-reg, .pop-heavy, .card .card-header:not(.bg-p), .btn-strong {
@@ -492,7 +508,8 @@ ul.order-brief li {
   font-size: 14px;
   line-height: 28px;
 }
-.table-input input {
+.table-input input,
+.table-input select {
   height: 30px !important;
   padding: 0 10px 0 30px;
   margin: 0px 0px 0 0;
@@ -687,7 +704,7 @@ thead th {
 }
 
 .transcard {
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: white;
   border-radius: 5px;
 }
 .transcard .dragcard {
@@ -729,6 +746,34 @@ thead th {
 }
 .powered-text a {
   padding: 0 !important;
+}
+
+.tcard-form {
+  background-color: #f3f3f3;
+  padding: 0 10px;
+}
+
+.vininput-sm {
+  border: 1px solid #B9D2DC;
+  border-radius: 5px;
+}
+.vininput-sm select, .vininput-sm span {
+  height: 30px;
+}
+.vininput-sm span {
+  padding: 0 !important;
+  margin: 0 !important;
+  width: auto;
+  min-width: 30px;
+  border: none;
+  background: #fff;
+}
+.vininput-sm span i.icon:before {
+  color: #000;
+  font-size: 18px;
+}
+.vininput-sm select {
+  border: none;
 }
 
 /*# sourceMappingURL=style.css.map */

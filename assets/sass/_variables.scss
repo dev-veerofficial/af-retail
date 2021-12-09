@@ -11,6 +11,8 @@ $color-sidebar-p: #17203f;
 $color-sidebar-s: #273050;
 $color-gold: #e19e39;
 $color-luminous: #A4938D;
+$color-darkgreen: #375E6E;
+$color-litegreen: #E4F2F8;
 
 //Effects
 
@@ -34,9 +36,21 @@ $color-luminous: #A4938D;
 .bg-p {
     background-color: $color-p;
 }
+.bg-p-lite {
+    background-color: $color-p-lite;
+}
 .bg-success {
     background-color: $color-success;
 }
+
+.bg-darkgreen{
+    background-color: $color-darkgreen;
+}
+
+.bg-litegreen{
+    background-color: $color-litegreen;
+}
+
 .txt-p {
     color: $color-p;
 }
@@ -61,7 +75,9 @@ $color-luminous: #A4938D;
 .txt-luminous{
     color: $color-luminous;
 }
-
+.txt-darkgreen{
+    color: $color-darkgreen;
+}
 
 
 // Fonts:

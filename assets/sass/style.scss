@@ -238,7 +238,8 @@ ul.order-brief li {
         font-size: 14px;
         line-height: 28px;
     }
-    input {
+    input,
+    select {
         height: 30px !important;
         padding: 0 10px 0 30px;
         margin: 0px 0px 0 0;
@@ -455,7 +456,7 @@ thead th {
 }
 
 .transcard {
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 1);
     border-radius: 5px;
 
     .dragcard {
@@ -497,5 +498,36 @@ thead th {
     display: none;
     a {
         padding: 0 !important;
+    }
+}
+
+.tcard-form {
+    background-color: #f3f3f3;
+    padding: 0 10px;
+}
+
+.vininput-sm {
+    border:1px solid #B9D2DC;
+    border-radius: 5px;
+    select,span {
+        height: 30px;
+    }
+    span {
+        padding: 0 !important;
+        margin: 0 !important;
+        width: auto;
+        min-width: 30px;
+        border: none;
+        background: #fff;
+
+        i.icon:before{
+            color: $color-dark;
+            font-size: 18px;
+        }
+
+    }
+
+    select{
+        border: none;
     }
 }
