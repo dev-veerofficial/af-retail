@@ -279,7 +279,7 @@
                                             </span>
                                         </td>
                                         <td>Foynes</td>
-                                        <td>139227 <i class="fa fa-check-double txt-success"></i> </td>
+                                        <td>139227 <i class="fa fa-check-double txt-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Plan Finalized"></i> </td>
                                         <td>BOL123456</td>
                                         <td><span class="">30K</span></td>
                                         <td><span class="txt-grey">0</span></td>
@@ -288,7 +288,7 @@
                                         <td><span class="">5K</span></td>
                                         <td><span class="txt-grey">0</span></td>
                                         <td><span class="txt-grey">0</span></td>
-                                        <td>Brian Rawley <span class="txt-gold"> <button class="btn btn-sm txt-gold" style="padding: 0 !important;"><i class="fa fa-bell"></i></button></span></td>
+                                        <td>Brian Rawley <span class="txt-gold"> <button class="btn btn-sm txt-gold" style="padding: 0 !important;"><i class="fa fa-bell" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Send Notification"></i></button></span></td>
                                         <td>PWT 720</td>
                                         <td>12LH 369</td>
                                         <td>1</td>
@@ -296,7 +296,7 @@
                                         <td>
                                             <span class="para-xl mdmcbox">
                                                 <a href="javascript:void(0);" class="mdcaller"><i
-                                                        class="fa fa-plus-circle"></i></a>
+                                                        class="fa fa-plus-circle" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Add MD/MC"></i></a>
                                                 <div class="mdmc">
                                                     <div class="row">
                                                         <div class="col-12">
@@ -331,11 +331,11 @@
                                             </span>
                                             </span>
                                             <span class="para-xl mx-2"><a href="javascript:void(0);">
-                                                <i class="fa fa-save txt-success"></i></a>
+                                                <i class="fa fa-save txt-success" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Save Changes"></i></a>
                                             </span>
                                             <span class="para-xl">
                                                 <a href="javascript:void(0);">
-                                                    <i class="fa fa-calendar-alt txt-dark"></i>
+                                                    <i class="fa fa-calendar-alt txt-dark" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Re-schedule"></i>
                                                 </a>
                                             </span>
                                         </td>
@@ -556,6 +556,12 @@
             $("#datepicker").datepicker();
         });
     </script>
+    <script>
+        var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+        var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+          return new bootstrap.Tooltip(tooltipTriggerEl)
+        })
+        </script>
 </body>
 
 </html>
